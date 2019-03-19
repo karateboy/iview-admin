@@ -18,32 +18,30 @@ export default {
   props: {
     lang: String
   },
-  data () {
+  data() {
     return {
       langList: {
-        'zh-CN': '语言',
         'zh-TW': '語言',
         'en-US': 'Lang'
       },
       localList: {
-        'zh-CN': '中文简体',
         'zh-TW': '中文繁体',
         'en-US': 'English'
       }
     }
   },
   watch: {
-    lang (lang) {
+    lang(lang) {
       this.$i18n.locale = lang
     }
   },
   computed: {
-    title () {
+    title() {
       return this.langList[this.lang]
     }
   },
   methods: {
-    selectLang (name) {
+    selectLang(name) {
       this.$emit('on-lang-change', name)
     }
   }

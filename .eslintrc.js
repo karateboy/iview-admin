@@ -13,7 +13,9 @@ module.exports = {
       'x-invalid-end-tag': false
     }],
     'no-undef': 'off',
-    'camelcase': 'off'
+    'camelcase': 'off',
+    'no-extra-semi': 'off',
+    'space-before-function-paren': ["error", "never"]
   },
   parserOptions: {
     parser: 'babel-eslint'

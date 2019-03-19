@@ -49,3 +49,27 @@ export const getTreeSelectData = () => {
     method: 'get'
   })
 }
+
+export const getRealtimeData = () => {
+  return axios.request({
+    url: 'realtime_data',
+    method: 'get'
+  })
+}
+
+export const getMonitorTypes = () => {
+  return axios.request({
+    url: 'monitor_types',
+    method: 'get'
+  })
+}
+
+export const getHistoryData = ({ monitorTypes, start, end }) => {
+  return axios.request({
+    url: 'history_data',
+    method: 'get',
+    params: {
+      monitorTypes, start, end
+    }
+  })
+}
